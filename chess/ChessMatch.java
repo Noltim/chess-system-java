@@ -33,7 +33,7 @@ public class ChessMatch {
         return (ChessPiece) capturedPiece;
     }
 
-    private Piece makeMove(Position source, Position target){
+    private Piece makeMove(Position source, Position target) {
         Piece p = board.removePiece(source);
         Piece capturedPiece = board.removePiece(target);
         board.placePiece(p, target);
@@ -45,7 +45,6 @@ public class ChessMatch {
             throw new ChessException("There is no piece on source position");
         }
     }
-
 
     private void placeNewPiece(char column, int row, ChessPiece piece) {
         board.placePiece(piece, new ChessPosition(column, row).toPosition());
